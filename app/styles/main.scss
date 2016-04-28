@@ -1,0 +1,36 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.content {
+  padding: 5px;
+}
+
+nav {
+  li {
+    list-style-type: none;
+    padding: 20px 0;
+  }
+}
+
+.pve-list-item {
+  td {
+    padding: 10px;
+  }
+}
+
+.pve-list{
+  list-style-type: none;
+
+  li {
+    border-bottom: 1px solid lightblue;
+  }
+}
+
+.glyphicon {
+  &:hover{
+    color: blue;
+    cursor: pointer;
+  }
+}
