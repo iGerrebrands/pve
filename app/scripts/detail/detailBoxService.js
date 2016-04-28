@@ -6,7 +6,7 @@ angular
 
   ) {
     var active = null;
-    this.displayData = null;
+    var displayData = null;
 
     this.setActive = function (newValue) {
       active = newValue;
@@ -17,7 +17,11 @@ angular
     };
 
     this.setDisplayData = function (data) {
-      this.displayData = data;
+      displayData = data;
+    };
+
+    this.getData = function () {
+      return displayData;
     };
 
   });

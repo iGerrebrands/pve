@@ -12,11 +12,16 @@ angular
       link: function (
         scope
       ) {
-        detailBoxService.setActive('pve');
         scope.$watch(function () {
           return detailBoxService.getActive()
         },function (newVal) {
             scope.active = newVal;
+        });
+
+        scope.$watch(function () {
+          return detailBoxService.getData();
+        }, function (newVal) {
+          scope.displayData = newVal;
         });
       }
     };

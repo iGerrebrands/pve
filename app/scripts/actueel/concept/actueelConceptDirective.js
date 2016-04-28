@@ -3,7 +3,7 @@
 angular
   .module('pveApp')
   .directive('actueelConcept', function (
-
+    detailBoxService
   ) {
     return {
       restrict: 'A',
@@ -29,6 +29,11 @@ angular
             date: '18 februari 2016'
           }
         ];
+
+        scope.setDetails = function (item) {
+          detailBoxService.setDisplayData(item);
+          detailBoxService.setActive('pve');
+        };
       }
     };
   });
