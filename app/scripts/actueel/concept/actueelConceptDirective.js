@@ -7,7 +7,7 @@ angular
   ) {
     return {
       restrict: 'A',
-      templateUrl: './scripts/actueel/actueelConceptView.html',
+      templateUrl: './scripts/actueel/concept/actueelConceptView.html',
       scope: {},
       link: function (
         scope

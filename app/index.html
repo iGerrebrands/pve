@@ -28,9 +28,7 @@
         </ul>
       </nav>
 
-      <div class="col-md-6" ng-view=""></div>
-
-      <div class="col-md-4 detail-box"></div>
+      <div class="col-md-10 row" ng-view=""></div>
     </div>
 
 
@@ -61,9 +59,14 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+
+        <script src="scripts/detail/detailBoxService.js"></script>
+        <script src="scripts/detail/detailBoxDirective.js"></script>
         <script src="scripts/actueel/actueelController.js"></script>
-        <script src="scripts/actueel/actueelConceptDirective.js"></script>
+        <script src="scripts/actueel/concept/actueelConceptDirective.js"></script>
+        <script src="scripts/actueel/vastgesteld/vastgesteldDirective.js"></script>
         <script src="scripts/pve/pveListItemDirective.js"></script>
+
         <script src="scripts/main/main.js"></script>
         <!-- endbuild -->
 </body>
