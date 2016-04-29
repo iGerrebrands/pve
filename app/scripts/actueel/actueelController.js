@@ -18,23 +18,16 @@ angular
       $scope.vastgesteldShow = !$scope.vastgesteldShow;
     };
 
-    $scope.actueelList = pveService.get
+    $scope.$watch(function () {
+      return pveService.getActueelConceptList();
+    }, function (newVal) {
+      $scope.conceptList = newVal;
+    });
 
-    $scope.vastgesteldList = [
-      {
-        title: 'PvE 8811',
-        type: 'Onderhoud',
-        date: '10 maart 2016'
-      },
-      {
-        title: 'PvE 678',
-        type: 'Beheer',
-        date: '8 maart 2016'
-      },
-      {
-        title: 'PvE 32',
-        type: 'Onderhoud, Nieuwbouw',
-        date: '5 februari 2016'
-      }
-    ];
+    $scope.$watch(function () {
+      return pveService.getActueelVastgesteldList();
+    }, function (newVal) {
+      $scope.vastgesteldList = newVal;
+    });
+
   });
