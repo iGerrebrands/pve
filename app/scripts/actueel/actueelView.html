@@ -6,14 +6,14 @@
     <span ng-click="toggleConceptShow()" ng-show="conceptShow" class="glyphicon glyphicon-menu-up"></span>
   </h2>
 
-  <div actueel-concept ng-show="conceptShow"></div>
+  <div pve-list items="actueelList" ng-show="conceptShow"></div>
 
   <h2 class="toggle-text">Vastgesteld:
     <span ng-click="toggleVastgesteldShow()" ng-show="!vastgesteldShow" class="glyphicon glyphicon-menu-down"></span>
     <span ng-click="toggleVastgesteldShow()" ng-show="vastgesteldShow" class="glyphicon glyphicon-menu-up"></span>
   </h2>
 
-  <div vastgesteld ng-show="vastgesteldShow"></div>
+  <div pve-list items="vastgesteldList" ng-show="vastgesteldShow"></div>
 </div>
 
 <div class="col-md-3" detail-box></div>

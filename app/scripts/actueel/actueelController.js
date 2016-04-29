@@ -3,7 +3,8 @@
 angular
   .module('pveApp')
   .controller('ActueelController', function(
-    $scope
+    $scope,
+    pveService
   ) {
     $scope.title = "Actueel overzicht";
 
@@ -16,8 +17,24 @@ angular
     $scope.toggleVastgesteldShow = function () {
       $scope.vastgesteldShow = !$scope.vastgesteldShow;
     };
-  });
 
-/**
- * Created by ian on 28-4-2016.
- */
+    $scope.actueelList = pveService.get
+
+    $scope.vastgesteldList = [
+      {
+        title: 'PvE 8811',
+        type: 'Onderhoud',
+        date: '10 maart 2016'
+      },
+      {
+        title: 'PvE 678',
+        type: 'Beheer',
+        date: '8 maart 2016'
+      },
+      {
+        title: 'PvE 32',
+        type: 'Onderhoud, Nieuwbouw',
+        date: '5 februari 2016'
+      }
+    ];
+  });
