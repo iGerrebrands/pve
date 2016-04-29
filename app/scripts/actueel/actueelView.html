@@ -1,17 +1,17 @@
 <div class="col-md-9">
   <h1>{{title}}</h1>
 
-  <h2 class="toggle-text">Concept:
+  <h3 class="toggle-text">Concept ({{conceptList.length}})
     <span ng-click="toggleConceptShow()" ng-show="!conceptShow" class="glyphicon glyphicon-menu-down"></span>
     <span ng-click="toggleConceptShow()" ng-show="conceptShow" class="glyphicon glyphicon-menu-up"></span>
-  </h2>
+  </h3>
 
   <div pve-list items="conceptList" ng-show="conceptShow"></div>
 
-  <h2 class="toggle-text">Vastgesteld:
+  <h3 class="toggle-text">Vastgesteld ({{vastgesteldList.length}})
     <span ng-click="toggleVastgesteldShow()" ng-show="!vastgesteldShow" class="glyphicon glyphicon-menu-down"></span>
     <span ng-click="toggleVastgesteldShow()" ng-show="vastgesteldShow" class="glyphicon glyphicon-menu-up"></span>
-  </h2>
+  </h3>
 
   <div pve-list items="vastgesteldList" ng-show="vastgesteldShow"></div>
 </div>
