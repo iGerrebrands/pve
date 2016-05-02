@@ -1,9 +1,50 @@
-<h1>Details</h1>
-
 <div ng-show="active === 'pve'">
-  <ul>
-    <li><span>Naam: </span>{{displayData.title}}</li>
-    <li><span>Type: </span>{{displayData.type}}</li>
-    <li><span>Datum: </span>{{displayData.date}}</li>
-  </ul>
+  <div class="detailed-nav">
+    <ul>
+      <li><a href>Status wijzigen</a></li>
+      <li><a href>Update</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="detailed-header">
+      <h4>Omschrijving</h4>
+    </div>
+    <p class="detailed-content">
+      {{displayData.desc}}
+    </p>
+  </div>
+
+  <div>
+    <div class="detailed-header">
+      <h4>Algemeen</h4>
+    </div>
+    <div class="detailed-content">
+      <table class="detailed-table">
+        <tr>
+          <td><b>Projectnaam</b></td> <td>{{displayData.title}}</td>
+        </tr>
+        <tr>
+          <td><b>Projectnummer</b></td> <td>{{displayData.number}}</td>
+        </tr>
+        <tr>
+          <td><b>ProjectType(-n)</b></td> <td>{{displayData.type}}</td>
+        </tr>
+        <tr>
+          <td><b>Contractvorm</b></td> <td>{{displayData.contract}}</td>
+        </tr>
+        <tr>
+          <td><b>Datum van aanmaken</b></td> <td>{{displayData.date}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div>
+    <div class="detailed-header">
+      <h4>Inhoud</h4>
+    </div>
+    <p class="detailed-content">
+
+    </p>
+  </div>
 </div>
